@@ -1,0 +1,36 @@
+Starting the GUI:
+-> Click on run
+
+Main GUI:
+-> 4 buttons above: All, Expired, Non-Expired, Expiring in  7 days, each button will display the list of
+   consumables according to the button clicked on. For example, If user clicks on All, it will show all
+   consumables added in the scroll with textField implemented.
+
+-> Scroll and textField in the middle that will display the correct consumables according to button click
+-> 2 buttons below: Add Item and Remove Item, add allows you to add a new consumable and remove deletes one
+
+User Clicks on Add Item:
+-> ScrollPane holds two options, Food or Drink which user can select which one they want
+-> User enters the name of the food item and can type in notes on it
+-> User types price and weight
+-> To set expiry date, user must click on the 3 dot menu to open up the calendar and click on one date
+
+-> User can select Cancel button to discard everything and go back to the Main GUI
+-> If user selects add item, and any of the fields excluding notes is empty, a message will come up
+   indicating what is empty and cannot be left blank
+-> If user correctly inputs all data, hitting save will now take them back to the Main GUI and show them their item
+
+User Clicks on Remove Item:
+-> Scroll with textArea now shown with user's items , the item number is above each item
+-> User will need to type into the textField, the item number and click on remove to remove it
+
+-> If user clicks on remove and item number doesn't exist, nothing will be removed and take user back to the main menu
+-> User can click on cancel to discard everything
+
+User Clicks on Close on Main GUI:
+-> A message will come up asking the user if they are sure and all data will be saved
+-> If user clicks yes, then data will be saved and brought back on next run
+-> If user clicks no, then the window will not close
+
+User Clicks on Close on any Dialog (remove or add):
+-> Will cause the dialog to close, Main GUI will still be showing

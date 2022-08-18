@@ -1,0 +1,44 @@
+cURL Commands
+
+System is up message:
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/ping
+
+Listing all items:
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listAll
+
+Listing expired items:
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listExpired
+
+Listing non-expired items:
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listNonExpired
+
+Listing items expiring in a week:
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listExpiringIn7Days
+
+Adding an item:
+
+Adding a food item:
+curl -i -H "Content-Type: application/json" -X POST -d '{
+  "choice" : 1,
+  "name" : "FoodName",
+  "notes" : "anything",
+  "price" : 12.50,
+  "size" : 2.5,
+  "expiryDate" : "2021-11-27T00:00"
+}' localhost:8080/addFood
+
+Adding a drink item:
+curl -i -H "Content-Type: application/json" -X POST -d '{
+  "choice" : 2,
+  "name" : "DrinkName",
+  "notes" : "anything",
+  "price" : 15.30,
+  "size" : 1.5,
+  "expiryDate" : "2021-11-27T00:00"
+}' localhost:8080/addDrink
+
+Removing an item from the server via item index:
+curl -i -H "Content-Type: application/json" -X POST localhost:8080/removeItem/0
+
+Saving the state of the items:
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/exit
