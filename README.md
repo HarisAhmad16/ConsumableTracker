@@ -13,6 +13,7 @@
 ## CD into repo
 ```cd ConsumableTracker```
 
-## Run the server
+## Run the main application server
+```WebAppServerApplication.java```
 
-## Run the client
+## Run the client main application
